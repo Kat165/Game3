@@ -20,7 +20,7 @@ void Player::render(RenderTarget &target) {
 }
 
 void Player::initTexture() {
-    if(!this->texture.loadFromFile("../Textures/ship.png"))
+    if(!this->texture.loadFromFile("../Textures/jet.png"))
     {
         cout<<"ERROR::PLAYER::INITTEXTURE - loading texture failed\n";
     }

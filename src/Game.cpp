@@ -108,7 +108,7 @@ void Game::updateInput() {
     if (Mouse::isButtonPressed(Mouse::Left) && this->player->canAttack())
     {
         this->bullets.push_back(new Bullet(this->textures["BULLET"],
-                           this->player->getPos().x + this->player->getBounds().width/2.f, this->player->getPos().y,
+                           this->player->getPos().x + this->player->getBounds().width/2.f -3.f, this->player->getPos().y,
                            0.f, -1.f, 5.f));
     }
 }
@@ -229,11 +229,11 @@ void Game::updateCombat() {
 }
 
 void Game::initWorld() {
-    if(!this->worldBackgroundTex.loadFromFile("../Textures/space.png"))
+    if(!this->worldBackgroundTex.loadFromFile("../Textures/Space (2).png"))
         cout<<"GAME::INITWORLD - failed to init background texture"<<endl;
 
     this->worldBackground.setTexture(this->worldBackgroundTex);
-    this->worldBackground.setScale(0.5f,0.5f);
+    this->worldBackground.setScale(0.75f,1.f);
 }
 
 void Game::renderWorld() {
